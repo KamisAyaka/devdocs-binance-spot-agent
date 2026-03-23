@@ -109,6 +109,12 @@ Day 4 起已接入请求追踪和统一错误处理：
 - 响应头包含 `X-Request-ID` 与 `X-Process-Time-MS`
 - 异常响应统一为 `{"success": false, "error": {...}}` 结构
 
+Day 5 已完成模型层抽象：
+
+- 统一模型输入输出结构：`ChatMessage`、`ModelRequest`、`ModelResponse`
+- 抽象接口：`ModelClient`
+- 预留 OpenAI 兼容适配器：`OpenAICompatibleModelClient`
+
 ## 环境变量约定
 
 项目统一使用 `DEVDOCS_` 前缀管理环境变量，配置入口位于：
