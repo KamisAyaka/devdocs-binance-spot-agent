@@ -104,6 +104,11 @@ uvicorn app.main:app --reload
 - `GET /config`
 - `GET /docs`
 
+Day 4 起已接入请求追踪和统一错误处理：
+
+- 响应头包含 `X-Request-ID` 与 `X-Process-Time-MS`
+- 异常响应统一为 `{"success": false, "error": {...}}` 结构
+
 ## 环境变量约定
 
 项目统一使用 `DEVDOCS_` 前缀管理环境变量，配置入口位于：

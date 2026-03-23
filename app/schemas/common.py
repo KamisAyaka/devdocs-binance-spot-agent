@@ -20,3 +20,18 @@ class HealthPayload(BaseModel):
 
     status: str = Field(default="ok")
     service: str
+
+
+class ErrorDetail(BaseModel):
+    """Error detail payload."""
+
+    code: str
+    message: str
+    request_id: str
+
+
+class ErrorResponse(BaseModel):
+    """Standard error response envelope."""
+
+    success: bool = False
+    error: ErrorDetail
