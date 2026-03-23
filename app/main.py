@@ -3,14 +3,17 @@
 from fastapi import FastAPI
 
 from app.api.router import api_router
+from app.core.config import get_settings
 
 
 def create_app() -> FastAPI:
     """Create and configure the FastAPI application."""
+    settings = get_settings()
     app = FastAPI(
-        title="DevDocs Binance Spot Agent",
-        version="0.1.0",
+        title=settings.app_name,
+        version=settings.app_version,
         description="Developer-facing agent service for Binance Spot API documentation.",
+        debug=settings.debug,
     )
     app.include_router(api_router)
     return app

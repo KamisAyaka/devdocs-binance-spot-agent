@@ -85,20 +85,41 @@
 
 ## 本地启动
 
+先准备环境变量文件：
+
+```bash
+cp .env.example .env
+```
+
 安装依赖后，可通过 `uvicorn` 启动当前最小服务：
 
 ```bash
+pip install -e ".[dev]"
 uvicorn app.main:app --reload
 ```
 
 启动后可访问：
 
 - `GET /health`
+- `GET /config`
 - `GET /docs`
+
+## 环境变量约定
+
+项目统一使用 `DEVDOCS_` 前缀管理环境变量，配置入口位于：
+
+- [config.py](/Users/firefly/Desktop/learnagent/devdocs-binance-spot-agent/app/core/config.py)
+- [.env.example](/Users/firefly/Desktop/learnagent/devdocs-binance-spot-agent/.env.example)
+
+当前已纳入配置管理的字段包括：
+
+- 运行环境：`DEVDOCS_APP_ENV`、`DEVDOCS_DEBUG`、`DEVDOCS_LOG_LEVEL`
+- 模型相关：`DEVDOCS_MODEL_PROVIDER`、`DEVDOCS_MODEL_NAME`、`DEVDOCS_MODEL_BASE_URL`
+- 存储相关：`DEVDOCS_DATABASE_URL`
+- 功能开关：`DEVDOCS_ENABLE_WEB_SEARCH`
 
 ## 参考文档
 
 - [第一周任务拆解](/Users/firefly/Desktop/learnagent/devdocs-binance-spot-agent/docs/week-1-breakdown.md)
 - [技术方案草稿](/Users/firefly/Desktop/learnagent/devdocs-binance-spot-agent/docs/tech-design-draft.md)
-- [Day 1 完成清单](/Users/firefly/Desktop/learnagent/devdocs-binance-spot-agent/docs/day-1-checklist.md)
 - [学习计划](/Users/firefly/Desktop/learnagent/devdocs-binance-spot-agent/learning-plan.md)
