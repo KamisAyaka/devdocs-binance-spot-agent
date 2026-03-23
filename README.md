@@ -83,6 +83,19 @@
 
 后续可使用支持 `pyproject.toml` 的工具进行依赖安装和开发环境管理。
 
+## 本地启动
+
+安装依赖后，可通过 `uvicorn` 启动当前最小服务：
+
+```bash
+uvicorn app.main:app --reload
+```
+
+启动后可访问：
+
+- `GET /health`
+- `GET /docs`
+
 ## 参考文档
 
 - [第一周任务拆解](/Users/firefly/Desktop/learnagent/devdocs-binance-spot-agent/docs/week-1-breakdown.md)
