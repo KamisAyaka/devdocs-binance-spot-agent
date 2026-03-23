@@ -27,5 +27,11 @@ async def get_runtime_config(
             model_base_url=str(settings.model_base_url) if settings.model_base_url else None,
             database_url=settings.database_url,
             enable_web_search=settings.enable_web_search,
+            web_search_provider=settings.web_search_provider,
+            web_search_base_url=str(settings.web_search_base_url),
+            web_search_timeout_s=settings.web_search_timeout_s,
+            enable_web_fetch=settings.enable_web_fetch,
+            web_fetch_timeout_s=settings.web_fetch_timeout_s,
+            web_fetch_max_chars=settings.web_fetch_max_chars,
         ),
     )

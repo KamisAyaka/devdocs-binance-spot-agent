@@ -30,6 +30,13 @@ class Settings(BaseSettings):
 
     database_url: str = "sqlite:///./devdocs.db"
     enable_web_search: bool = False
+    web_search_provider: str = "duckduckgo"
+    web_search_base_url: AnyHttpUrl = "https://api.duckduckgo.com"
+    web_search_timeout_s: float = Field(default=10.0, gt=0.0)
+
+    enable_web_fetch: bool = True
+    web_fetch_timeout_s: float = Field(default=15.0, gt=0.0)
+    web_fetch_max_chars: int = Field(default=4000, ge=200, le=20000)
 
 
 @lru_cache

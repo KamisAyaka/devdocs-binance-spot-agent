@@ -115,6 +115,13 @@ Day 5 已完成模型层抽象：
 - 抽象接口：`ModelClient`
 - 预留 OpenAI 兼容适配器：`OpenAICompatibleModelClient`
 
+Day 6 已完成工具层抽象：
+
+- 统一工具输出结构：`ToolResult`
+- 抽象接口：`ToolClient`
+- 工具适配器：`DuckDuckGoSearchTool`、`WebFetchTool`
+- 工厂入口：`create_tool_clients(settings)`
+
 ## 环境变量约定
 
 项目统一使用 `DEVDOCS_` 前缀管理环境变量，配置入口位于：
@@ -128,6 +135,7 @@ Day 5 已完成模型层抽象：
 - 模型相关：`DEVDOCS_MODEL_PROVIDER`、`DEVDOCS_MODEL_NAME`、`DEVDOCS_MODEL_BASE_URL`
 - 存储相关：`DEVDOCS_DATABASE_URL`
 - 功能开关：`DEVDOCS_ENABLE_WEB_SEARCH`
+- 工具配置：`DEVDOCS_WEB_SEARCH_*`、`DEVDOCS_WEB_FETCH_*`
 
 ## 参考文档
 

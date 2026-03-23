@@ -18,3 +18,9 @@ class ConfigPayload(BaseModel):
     model_base_url: str | None
     database_url: str
     enable_web_search: bool
+    web_search_provider: str
+    web_search_base_url: str
+    web_search_timeout_s: float
+    enable_web_fetch: bool
+    web_fetch_timeout_s: float
+    web_fetch_max_chars: int
