@@ -122,6 +122,19 @@ Day 6 已完成工具层抽象：
 - 工具适配器：`DuckDuckGoSearchTool`、`WebFetchTool`
 - 工厂入口：`create_tool_clients(settings)`
 
+## Week 1 Demo
+
+运行最小演示脚本：
+
+```bash
+python scripts/week1_demo.py
+```
+
+脚本会演示：
+
+- `/health` 请求与响应头中的 `X-Request-ID`
+- `/config` 的配置摘要返回
+
 ## 环境变量约定
 
 项目统一使用 `DEVDOCS_` 前缀管理环境变量，配置入口位于：
@@ -140,5 +153,6 @@ Day 6 已完成工具层抽象：
 ## 参考文档
 
 - [第一周任务拆解](/Users/firefly/Desktop/learnagent/devdocs-binance-spot-agent/docs/week-1-breakdown.md)
+- [第 1 周收口总结](/Users/firefly/Desktop/learnagent/devdocs-binance-spot-agent/docs/week-1-summary.md)
 - [技术方案草稿](/Users/firefly/Desktop/learnagent/devdocs-binance-spot-agent/docs/tech-design-draft.md)
 - [学习计划](/Users/firefly/Desktop/learnagent/devdocs-binance-spot-agent/learning-plan.md)
